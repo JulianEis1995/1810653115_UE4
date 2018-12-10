@@ -23,9 +23,22 @@ public class Aufruf
         //For-Each Schleife
         for(Book f:b)
         {
-            System.out.println(f.getTitle() + " hat" + f.getPages() + " Seiten und folgende ISBN: " + f.getIsbn());
+            System.out.println(f.getTitle() + " hat " + f.getPages() + " Seiten und folgende ISBN: " + f.getIsbn());
         }
 
+        System.out.println("------------------------------------------------------");
+        //Aufgabe 5
+        List<Paperbook> pb = new ArrayList<>();
+        pb.add(new Paperbook(200, new Date(), "My Paperbook 1", "00000-000000-0000", "Series 1", "April"));
+        pb.add(new Paperbook(200, new Date(), "My Paperbook 2", "00000-000000-0000", "Series 1", "April"));
+        pb.add(new Paperbook(200, new Date(), "My Paperbook 3", "00000-000000-0000", "Series 2", "January"));
+        pb.add(new Paperbook(200, new Date(), "My Paperbook 4", "00000-000000-0000", "Series 2", "March"));
+        pb.add(new Paperbook(200, new Date(), "My Paperbook 5", "00000-000000-0000", "Series 3", "October"));
+
+        for(Paperbook f:pb)
+        {
+            System.out.println(f.getTitle() + " hat " + f.getPages() + " Seiten und folgende ISBN: " + f.getIsbn() + " zusätzlich ist es im Monat " + f.getMonth() + " erschienen");
+        }
 
 
     }
